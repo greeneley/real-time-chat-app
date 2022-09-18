@@ -6,8 +6,9 @@ import { useHistory } from "react-router-dom";
 export const AuthContext = React.createContext();
 export default function AuthProvider({ children }) {
   const [user, setUser] = useState({});
-  const [isLoading, setIsLoading] = useState(false);
   const history = useHistory();
+  const [isLoading, setIsLoading] = useState(true);
+
   React.useEffect(() => {
     const unsubscibed = auth.onAuthStateChanged((user) => {
       console.log({ user });
@@ -21,8 +22,9 @@ export default function AuthProvider({ children }) {
         });
         setIsLoading(false);
         history.push("/");
+      } else {
+        history.push("/login");
       }
-      history.push("/login");
     });
 
     return () => {
