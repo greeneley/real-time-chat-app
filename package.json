@@ -10,6 +10,7 @@
     "antd": "^4.23.2",
     "eslint": "^8.24.0",
     "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "firebase": "^8.6.8",
     "grpc": "^1.24.11",
@@ -30,8 +31,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {

@@ -1,5 +1,5 @@
 import { UserAddOutlined } from "@ant-design/icons";
-import { Avatar, Button, Form, Tooltip, Input } from "antd";
+import {Avatar, Button, Form, Input, Tooltip} from "antd";
 import React from "react";
 import styled from "styled-components";
 import Message from "./Message";
