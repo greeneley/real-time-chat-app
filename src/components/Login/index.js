@@ -1,13 +1,16 @@
 import React from "react";
 import { Button, Col, Row, Typography } from "antd";
-import firebase, { auth } from "../firebase/config";
+import firebase, { auth, db } from "../firebase/config";
 const { Title } = Typography;
 
 const fbProvider = new firebase.auth.FacebookAuthProvider();
 
 export default function Login() {
-  const handleFbLogin = () => {
-    auth.signInWithPopup(fbProvider);
+  const handleFbLogin = async () => {
+    const { additionalUserInfo, user } = await auth.signInWithPopup(fbProvider);
+    if (additionalUserInfo?.isNewUser) {
+      db;
+    }
   };
 
   return (
